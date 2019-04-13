@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+message CalciteParserRequest {
+  string query = 1;
+}
+
+message CalciteParserReply {
+  string sql = 1;
+  string extension = 2;
+  string error = 3;
+}
+
+service CalciteParser {
+  rpc Parse (CalciteParserRequest) returns (CalciteParserReply) {}
+}
