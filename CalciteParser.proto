@@ -1,5 +1,8 @@
 syntax = "proto3";
 
+option java_multiple_files = false;
+option java_outer_classname = "CalciteParserProto";
+
 message CalciteParserRequest {
   string query = 1;
 }
