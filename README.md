@@ -22,3 +22,10 @@ Build and generate `.class` files:
 ```bash
 docker run --rm -it -v $PWD:/work -w /work calcite:dev javac *.java
 ```
+
+
+All, actually, we can do all above in a single command:
+
+```bash
+docker run --rm -it -v $PWD:/work -w /work calcite:dev /build_and_test.bash
+```
